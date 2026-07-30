@@ -409,6 +409,108 @@ section { position: relative; }
   max-width: 1280px; margin: 0 auto;
 }
 
+/* Bento grid (Projects page) */
+.bento-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 768px) {
+  .bento-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 240px;
+  }
+}
+.bento-item {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: var(--card);
+  border: 1px solid var(--border);
+  transition: transform .5s, box-shadow .5s;
+  min-height: 220px;
+}
+.bento-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-elegant);
+}
+.bento-item .bento-img {
+  width: 100%;
+  height: 100%;
+  background: oklch(0.88 0.01 220);
+  display: grid;
+  place-items: center;
+  color: oklch(0.7 0.02 220);
+  font-size: .85rem;
+}
+.bento-item .bento-img svg {
+  width: 48px;
+  height: 48px;
+  opacity: .4;
+}
+.bento-item .bento-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(transparent, oklch(0 0 0 / .6));
+  color: #fff;
+}
+.bento-item .bento-tag {
+  display: inline-block;
+  font-size: .65rem;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  padding: .25rem .75rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.15);
+  backdrop-filter: blur(6px);
+  margin-bottom: .5rem;
+}
+.bento-item h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.bento-item p {
+  font-size: .8rem;
+  opacity: .8;
+  margin-top: .25rem;
+}
+.bento-featured {
+  grid-column: span 2;
+  grid-row: span 2;
+  min-height: 380px;
+}
+.bento-featured h3 {
+  font-size: 1.5rem;
+}
+.bento-wide {
+  grid-column: span 2;
+}
+.bento-tall {
+  grid-row: span 2;
+}
+.bento-full {
+  grid-column: 1 / -1;
+}
+@media (max-width: 767px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .bento-featured {
+    grid-column: span 1;
+    grid-row: span 1;
+    min-height: 220px;
+  }
+  .bento-wide, .bento-full {
+    grid-column: span 1;
+  }
+  .bento-tall {
+    grid-row: span 1;
+  }
+}
+
 /* Reveal animations */
 .reveal { opacity: 0; transform: translateY(40px);
   transition: opacity .8s cubic-bezier(0.22, 1, 0.36, 1), transform .8s cubic-bezier(0.22, 1, 0.36, 1); }
