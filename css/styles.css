@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5 {
   height: 80px; display: flex; align-items: center; justify-content: space-between;
 }
 @media (min-width: 1024px) { .header-inner { padding: 0 2.5rem; } }
-.logo img { height: 40px; width: auto; }
+.logo img { height: 56px; width: auto; }
 .nav-desktop { display: none; align-items: center; gap: .25rem; }
 .nav-desktop a {
   position: relative; padding: .5rem 1rem; font-size: .9rem; font-weight: 500;
@@ -395,7 +395,7 @@ section { position: relative; }
   .footer-inner { grid-template-columns: repeat(4, 1fr); padding: 5rem 2.5rem; }
   .footer-brand { grid-column: span 2; }
 }
-.footer-brand img { height: 40px; margin-bottom: 1rem; filter: brightness(0) invert(1); }
+.footer-brand img { height: 56px; margin-bottom: 1rem; filter: brightness(0) invert(1); }
 .footer-brand p { font-size: .9rem; opacity: .7; max-width: 28rem; }
 .footer-col h4 { font-family: var(--font-display); font-weight: 600; font-size: .8rem; text-transform: uppercase; letter-spacing: .2em; margin-bottom: 1rem; }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .5rem; font-size: .9rem; opacity: .8; }
